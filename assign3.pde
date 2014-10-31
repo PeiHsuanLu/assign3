@@ -212,6 +212,7 @@ void mousePressed(){
     int mc = (mouseX - ix)/ SLOT_SIZE;
     int mr = (mouseY - iy)/ SLOT_SIZE;
     
+    if(mouseButton==LEFT){
     if(slot[mc][mr] == SLOT_BOMB){
       showSlot(mc,mr, SLOT_DEAD);
       slot[mc][mr] = SLOT_DEAD;
@@ -222,6 +223,7 @@ void mousePressed(){
       slot[mc][mr] = SLOT_SAFE;
       clickCount++;
     }
+   }
   }
 }
 
